@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSignInOptions() {
         startActivityForResult(
-                AuthUI.getInstance().createSignInIntentBuilder()
-                        .setAvailableProviders(providers)
+                AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers)
                         .setTheme(R.style.MyTheme).build(), MY_REQUEST_CODE
         );
     }
