@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763447763200",
+    "firebase_url": "https://first-project-2ed83.firebaseio.com",
+    "project_id": "first-project-2ed83",
+    "storage_bucket": "first-project-2ed83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763447763200:android:7e8c80dfaaa9c248cc93e5",
+        "android_client_info": {
+          "package_name": "com.afumoons.covidareaku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763447763200-2itu0vd59n5lf2njqic3r4sf8ern608b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsTm06f7U2xBHaddCNROj2Nv4mjoK-AMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763447763200-2itu0vd59n5lf2njqic3r4sf8ern608b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
