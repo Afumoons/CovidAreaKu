@@ -6,17 +6,9 @@
             android:icon="@drawable/home_icon"
             android:title="Home" />
         <item
-            android:id="@+id/nav_home2"
-            android:icon="@drawable/home_icon"
-            android:title="Home" />
-        <item
-            android:id="@+id/nav_home3"
-            android:icon="@drawable/home_icon"
-            android:title="Home" />
-        <item
-            android:id="@+id/nav_home4"
-            android:icon="@drawable/home_icon"
-            android:title="Home" />
+            android:id="@+id/nav_map"
+            android:icon="@drawable/mapdark_icon"
+            android:title="Maps" />
     </group>
 
     <item android:title="Profile">
@@ -35,19 +27,6 @@
                     android:icon="@drawable/logout_icon"
                     android:title="Logout" />
             </group>
-        </menu>
-    </item>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/share_icon"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_rate"
-                android:icon="@drawable/rate_icon"
-                android:title="Rate Us" />
         </menu>
     </item>
 

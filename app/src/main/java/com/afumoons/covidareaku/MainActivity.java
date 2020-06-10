@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (menuItem.getItemId()) {
             case R.id.nav_home:
                 break;
-            case R.id.nav_home2:
+            case R.id.nav_map:
                 intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
                 break;
@@ -117,9 +117,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Toast.makeText(MainActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-                break;
-            case R.id.nav_share:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
                 break;
         }
 
