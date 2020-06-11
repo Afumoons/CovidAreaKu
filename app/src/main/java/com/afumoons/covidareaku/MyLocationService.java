@@ -19,9 +19,10 @@ public class MyLocationService extends BroadcastReceiver {
                 LocationResult result = LocationResult.extractResult(intent);
                 if (result != null) {
                     Location location = result.getLastLocation();
-                    String location_string=new StringBuilder(""+location.getLatitude()).append("/").append(location.getLongitude()).toString();
+                    String location_string= "" + location.getLatitude() + "/" + location.getLongitude();
                     try {
-                        MapsActivity.getInstance().updateTextView(location.getLatitude(),location.getLongitude());
+                        MapsActivity.getInstance().updateMapPointer(location.getLatitude(),
+                                location.getLongitude());
                     } catch (Exception ex) {
                         Toast.makeText(context, location_string, Toast.LENGTH_SHORT).show();
                     }

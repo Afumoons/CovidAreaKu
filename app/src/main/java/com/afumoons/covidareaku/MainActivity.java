@@ -30,7 +30,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
@@ -62,7 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menu.findItem(R.id.nav_profile).setVisible(false);
 
         navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -99,29 +99,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_logout:
                 //Logout
-                AuthUI.getInstance().signOut(MainActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        //Hooks
-                        hooksFunction();
-                        //Remove user information
-                        txt_name.setText("Login");
-                        txt_email.setText("Untuk informasi user");
-                        iv_userimage.setImageResource(R.drawable.user_icon);
-                        Toast.makeText(MainActivity.this, "Logout berhasil", Toast.LENGTH_SHORT).show();
-                        menu.findItem(R.id.nav_logout).setVisible(false);
-                        menu.findItem(R.id.nav_profile).setVisible(false);
-                        menu.findItem(R.id.nav_login).setVisible(true);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
+                AuthUI.getInstance().signOut(MainActivity.this).addOnCompleteListener(
+                        new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                //Hooks
+                                hooksFunction();
+                                //Remove user information
+                                txt_name.setText("Login");
+                                txt_email.setText("Untuk informasi user");
+                                iv_userimage.setImageResource(R.drawable.user_icon);
+                                Toast.makeText(MainActivity.this, "Logout berhasil",
+                                        Toast.LENGTH_SHORT).show();
+                                menu.findItem(R.id.nav_logout).setVisible(false);
+                                menu.findItem(R.id.nav_profile).setVisible(false);
+                                menu.findItem(R.id.nav_login).setVisible(true);
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "" + e.getMessage(),
+                                Toast.LENGTH_SHORT).show();
                     }
                 });
                 break;
         }
-
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -146,7 +148,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 menu.findItem(R.id.nav_profile).setVisible(true);
                 menu.findItem(R.id.nav_login).setVisible(false);
             } else {
-                Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "" + response.getError().getMessage(),
+                        Toast.LENGTH_SHORT).show();
             }
         }
     }
